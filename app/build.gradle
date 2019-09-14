@@ -52,7 +52,6 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
 
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
