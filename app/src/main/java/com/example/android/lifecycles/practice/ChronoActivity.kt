@@ -17,13 +17,12 @@
 package com.example.android.lifecycles.practice
 
 import android.os.Bundle
+import android.os.SystemClock
 import android.widget.Chronometer
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-
 import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.LifeCycleActivity
+import timber.log.Timber
 
 class ChronoActivity : LifeCycleActivity() {
 
@@ -32,9 +31,16 @@ class ChronoActivity : LifeCycleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val chronometer = findViewById<Chronometer>(R.id.chronometer)
 
+        val startTime = viewModel.startTime
+        if (startTime == null) {
+            val time = SystemClock.elapsedRealtime()
+            viewModel.startTime = time
+            chronometer.base = time
+        } else {
+            chronometer.base = startTime
+        }
         chronometer.start()
     }
 }
