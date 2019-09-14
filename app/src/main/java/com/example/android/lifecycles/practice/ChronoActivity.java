@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package com.example.android.lifecycles;
+package com.example.android.lifecycles.practice;
 
 import android.os.Bundle;
 import android.widget.Chronometer;
 
 import com.example.android.codelabs.lifecycle.R;
+import com.example.android.lifecycles.LifeCycleActivity;
 
 
 public class ChronoActivity extends LifeCycleActivity {
