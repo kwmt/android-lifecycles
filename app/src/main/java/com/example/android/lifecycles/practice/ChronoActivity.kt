@@ -18,11 +18,16 @@ package com.example.android.lifecycles.practice
 
 import android.os.Bundle
 import android.widget.Chronometer
+import androidx.activity.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 
 import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.LifeCycleActivity
 
 class ChronoActivity : LifeCycleActivity() {
+
+    private val viewModel by viewModels<ChronoViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
