@@ -14,24 +14,22 @@
  * limitations under the License.
  */
 
-package com.example.android.lifecycles.practice;
+package com.example.android.lifecycles.practice
 
-import android.os.Bundle;
-import android.widget.Chronometer;
+import android.os.Bundle
+import android.widget.Chronometer
 
-import com.example.android.codelabs.lifecycle.R;
-import com.example.android.lifecycles.LifeCycleActivity;
+import com.example.android.codelabs.lifecycle.R
+import com.example.android.lifecycles.LifeCycleActivity
 
+class ChronoActivity : LifeCycleActivity() {
 
-public class ChronoActivity extends LifeCycleActivity {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        val chronometer = findViewById<Chronometer>(R.id.chronometer)
 
-        Chronometer chronometer = findViewById(R.id.chronometer);
-
-        chronometer.start();
+        chronometer.start()
     }
 }
