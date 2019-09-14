@@ -30,6 +30,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name="com.example.android.lifecycles.ChronoActivity"
+            android:label="Practice">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.android.lifecycles.step1.ChronoActivity1"
             android:label="LC Step1">
             <intent-filter>
