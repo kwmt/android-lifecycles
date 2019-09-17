@@ -1,4 +1,4 @@
-package com.example.android.lifecycles.practice
+package com.example.android.lifecycles.practice.viewmodel_livedata
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.android.codelabs.lifecycle.R
 
 /**
  * A simple [Fragment] subclass.

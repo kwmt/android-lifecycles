@@ -1,8 +1,7 @@
-package com.example.android.lifecycles.practice
+package com.example.android.lifecycles.practice.viewmodel_livedata
 
 import android.content.Context
 import android.widget.TextView
-import org.jetbrains.annotations.NotNull
 
 class Singleton {
     var textView: TextView? = null
@@ -25,7 +24,10 @@ class SingletonSampleClass private constructor(private var context: Context?) {
         @Synchronized
         fun getInstance(context: Context): SingletonSampleClass {
             if(instance == null)
-                instance = SingletonSampleClass(context)
+                instance =
+                    SingletonSampleClass(
+                        context
+                    )
             return instance!!
         }
     }
