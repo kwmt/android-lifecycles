@@ -31,7 +31,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.android.lifecycles.practice.ChronoActivity"
+            android:name="com.example.android.lifecycles.practice.viewmodel_livedata.ChronoActivity"
             android:label="Practice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -87,7 +87,13 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-<!--        <activity-->
+        <activity android:name="com.example.android.lifecycles.practice.lifecycle.LocationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--        <activity-->
 <!--            android:name="com.example.android.lifecycles.step5_solution.Activity_step5"-->
 <!--            android:label="LC Step5 Sol">-->
 <!--            <intent-filter>-->
