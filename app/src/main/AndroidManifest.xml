@@ -35,6 +35,7 @@
             android:label="Practice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -86,33 +87,33 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.android.lifecycles.step5_solution.Activity_step5"
-            android:label="LC Step5 Sol">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--        <activity-->
+<!--            android:name="com.example.android.lifecycles.step5_solution.Activity_step5"-->
+<!--            android:label="LC Step5 Sol">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.android.lifecycles.step6.SavedStateActivity"
-            android:label="LC Step6">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="com.example.android.lifecycles.step6.SavedStateActivity"-->
+<!--            android:label="LC Step6">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.android.lifecycles.step6_solution.SavedStateActivity"
-            android:label="LC Step6 Sol">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="com.example.android.lifecycles.step6_solution.SavedStateActivity"-->
+<!--            android:label="LC Step6 Sol">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
     </application>
 
 </manifest>
