@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import com.example.android.lifecycles.practice.ChronoViewModel
+import com.example.android.lifecycles.practice.viewmodel_livedata.ChronoViewModel
 import timber.log.Timber
 import timber.log.Timber.DebugTree
 
