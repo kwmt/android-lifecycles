@@ -39,8 +39,18 @@ abstract class LifeCycleActivity : AppCompatActivity() {
         Timber.d("onDestroy after super.onDestroy")
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Timber.d("onSaveInstanceState")
+    }
+
     override fun onRestart() {
         super.onRestart()
         Timber.d("onRestart")
+    }
+
+    override fun finish() {
+        Timber.d("finish")
+        super.finish()
     }
 }
