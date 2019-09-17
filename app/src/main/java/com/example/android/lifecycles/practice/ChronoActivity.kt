@@ -16,31 +16,65 @@
 
 package com.example.android.lifecycles.practice
 
+import android.app.AlertDialog
 import android.os.Bundle
-import android.os.SystemClock
-import android.widget.Chronometer
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.LifeCycleActivity
+import kotlinx.android.synthetic.main.activity_main.activity_main
 import timber.log.Timber
 
 class ChronoActivity : LifeCycleActivity() {
+
+    companion object {
+        private var innerClass: SomeInnerClass? = null
+    }
 
     private val viewModel by viewModels<ChronoViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val chronometer = findViewById<Chronometer>(R.id.chronometer)
 
-        val startTime = viewModel.startTime
-        if (startTime == null) {
-            val time = SystemClock.elapsedRealtime()
-            viewModel.startTime = time
-            chronometer.base = time
-        } else {
-            chronometer.base = startTime
-        }
-        chronometer.start()
+
+        activity_main.addView(Button(this).apply {
+            setText("postValueのgetValue")
+            setOnClickListener {
+                AlertDialog.Builder(this@ChronoActivity).apply {
+                    setTitle("value")
+                    setMessage("${viewModel.getNoObserveLiveData().value}")
+                }.create().show()
+            }
+        })
+
+        val timerTextView: TextView = findViewById(R.id.timer_textview)
+        viewModel.getElapsedTime().observe(this, Observer {
+            timerTextView.text = "${it}秒経過"
+        })
+
+        Timber.d("setValueのgetValue:${viewModel.getElapsedTime().value}")
+        Timber.d("No Observe postValueのgetValue:${viewModel.getNoObserveLiveData().value}")
+
+//        viewModel.timerTextView = timerTextView
+//        viewModel.activity = this
+//
+////        singletonSampleClass = SingletonSampleClass.getInstance(this)
+//
+////        if(innerClass == null) {
+////            innerClass = SomeInnerClass()
+////        }
+////        ModelLocator.instance.singleton?.textView = timerTextView
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+//        singletonSampleClass.onDestroy()
+    }
+
+    internal inner class SomeInnerClass {
+        fun doSomething() {}
     }
 }
