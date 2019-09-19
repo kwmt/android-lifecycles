@@ -21,9 +21,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-
 import androidx.fragment.app.Fragment
-
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.example.android.codelabs.lifecycle.R
 
 /**
@@ -33,7 +33,7 @@ class Fragment_step5 : Fragment() {
 
     private var mSeekBar: SeekBar? = null
 
-    private val mSeekBarViewModel: SeekBarViewModel? = null
+    private val mSeekBarViewModel: SeekBarViewModel by viewModels({ requireActivity() })
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +43,6 @@ class Fragment_step5 : Fragment() {
         val root = inflater.inflate(R.layout.fragment_step5, container, false)
         mSeekBar = root.findViewById(R.id.seekBar)
 
-        // TODO: get ViewModel
         subscribeSeekBar()
 
         return root
@@ -55,7 +54,7 @@ class Fragment_step5 : Fragment() {
 
         mSeekBar?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                // TODO: Set the ViewModel's value when the change comes from the user.
+                mSeekBarViewModel.seekbarValue.value = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {}
@@ -65,5 +64,8 @@ class Fragment_step5 : Fragment() {
 
         // TODO: Update the SeekBar when the ViewModel is changed.
         // mSeekBarViewModel.seekbarValue.observe(...
+        mSeekBarViewModel.seekbarValue.observe(viewLifecycleOwner, Observer {
+            mSeekBar?.progress = it
+        })
     }
 }
