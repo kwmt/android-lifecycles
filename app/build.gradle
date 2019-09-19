@@ -20,7 +20,7 @@ apply plugin: 'kotlin-android-extensions'
 
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId 'com.example.android.codelabs.lifecycle'
         minSdkVersion 21
@@ -54,6 +54,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "androidx.fragment:fragment-ktx:1.1.0"
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
 

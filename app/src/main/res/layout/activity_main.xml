@@ -43,4 +43,12 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         />
+
+    <fragment
+        android:id="@+id/basicfragment"
+        android:name="com.example.android.lifecycles.practice.viewmodel_livedata.BlankFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/timer_textview"
+        />
 </RelativeLayout>

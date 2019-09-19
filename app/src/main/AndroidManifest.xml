@@ -87,6 +87,13 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.android.lifecycles.practice.share_viewmodel.Activity_step5"
+            android:label="LC Step5">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.example.android.lifecycles.practice.lifecycle.LocationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
