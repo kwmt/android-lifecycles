@@ -53,7 +53,7 @@ class Fragment_step5 : Fragment() {
 
         // Update the ViewModel when the SeekBar is changed.
 
-        mSeekBar!!.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        mSeekBar?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 // TODO: Set the ViewModel's value when the change comes from the user.
             }
