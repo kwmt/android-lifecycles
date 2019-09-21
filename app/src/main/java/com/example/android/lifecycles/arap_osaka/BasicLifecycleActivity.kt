@@ -4,10 +4,11 @@ import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.codelabs.lifecycle.R
+import com.example.android.lifecycles.LifeCycleLogActivity
 
 import kotlinx.android.synthetic.main.activity_basic_lifecycle.*
 
-class BasicLifecycleActivity : AppCompatActivity() {
+class BasicLifecycleActivity : LifeCycleLogActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
