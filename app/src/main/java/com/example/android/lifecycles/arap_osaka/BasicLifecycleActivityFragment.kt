@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.android.codelabs.lifecycle.R
+import com.example.android.lifecycles.LifeCycleFragment
 
 /**
  * A placeholder fragment containing a simple view.
  */
-class BasicLifecycleActivityFragment : Fragment() {
+class BasicLifecycleActivityFragment : LifeCycleFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
