@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.android.lifecycles.arap_osaka.BasicLifecycleActivity"
+            android:name="com.example.android.lifecycles.arap_osaka.BasicLifeCycleActivity"
             android:label="@string/title_activity_basic_lifecycle"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

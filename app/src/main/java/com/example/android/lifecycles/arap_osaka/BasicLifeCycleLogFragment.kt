@@ -11,7 +11,7 @@ import timber.log.Timber
 /**
  * A placeholder fragment containing a simple view.
  */
-class BasicLifecycleLogFragment : LifeCycleLogFragment() {
+class BasicLifeCycleLogFragment : LifeCycleLogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

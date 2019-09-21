@@ -8,7 +8,7 @@ import com.example.android.lifecycles.LifeCycleLogActivity
 
 import kotlinx.android.synthetic.main.activity_basic_lifecycle.*
 
-class BasicLifecycleActivity : LifeCycleLogActivity() {
+class BasicLifeCycleActivity : LifeCycleLogActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
