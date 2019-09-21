@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.android.lifecycles.practice.viewmodel_livedata.ChronoActivity"
+            android:name="com.example.android.lifecycles.practice.viewmodel_livedata.ChronoLogActivity"
             android:label="Practice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.android.lifecycles.step1.ChronoActivity1"
+            android:name="com.example.android.lifecycles.step1.ChronoLogActivity1"
             android:label="LC Step1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

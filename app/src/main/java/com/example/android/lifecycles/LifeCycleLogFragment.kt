@@ -18,7 +18,7 @@ val Throwable.stackTraceString: String
         return stringWriter.toString()
     }
 
-abstract class LifeCycleFragment : Fragment() {
+abstract class LifeCycleLogFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

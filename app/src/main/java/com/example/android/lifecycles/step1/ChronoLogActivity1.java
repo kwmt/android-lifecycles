@@ -20,10 +20,10 @@ import android.os.Bundle;
 import android.widget.Chronometer;
 
 import com.example.android.codelabs.lifecycle.R;
-import com.example.android.lifecycles.LifeCycleActivity;
+import com.example.android.lifecycles.LifeCycleLogActivity;
 
 
-public class ChronoActivity1 extends LifeCycleActivity {
+public class ChronoLogActivity1 extends LifeCycleLogActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

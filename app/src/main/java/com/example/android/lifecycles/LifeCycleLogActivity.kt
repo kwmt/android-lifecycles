@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import timber.log.Timber
 
-abstract class LifeCycleActivity : AppCompatActivity() {
+abstract class LifeCycleLogActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

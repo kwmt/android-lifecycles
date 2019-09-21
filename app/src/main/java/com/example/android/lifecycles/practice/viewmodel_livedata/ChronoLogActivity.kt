@@ -23,11 +23,11 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.android.codelabs.lifecycle.R
-import com.example.android.lifecycles.LifeCycleActivity
+import com.example.android.lifecycles.LifeCycleLogActivity
 import kotlinx.android.synthetic.main.activity_main.activity_main
 import timber.log.Timber
 
-class ChronoActivity : LifeCycleActivity() {
+class ChronoLogActivity : LifeCycleLogActivity() {
 
     companion object {
         private var innerClass: SomeInnerClass? = null
@@ -43,7 +43,7 @@ class ChronoActivity : LifeCycleActivity() {
         activity_main.addView(Button(this).apply {
             setText("postValueのgetValue")
             setOnClickListener {
-                AlertDialog.Builder(this@ChronoActivity).apply {
+                AlertDialog.Builder(this@ChronoLogActivity).apply {
                     setTitle("value")
                     setMessage("${viewModel.getNoObserveLiveData().value}")
                 }.create().show()
