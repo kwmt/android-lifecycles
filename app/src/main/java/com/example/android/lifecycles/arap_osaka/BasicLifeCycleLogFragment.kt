@@ -17,7 +17,7 @@ class BasicLifeCycleLogFragment : LifeCycleLogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Timber.tag("savedInstanceState").d("onCreateView: $savedInstanceState")
+        Timber.tag("LifeCycleLogFragment").d("onCreateView: $savedInstanceState")
         return inflater.inflate(R.layout.fragment_basic_lifecycle, container, false)
     }
 }
