@@ -1,5 +1,6 @@
 package com.example.android.lifecycles
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import timber.log.Timber
@@ -52,5 +53,10 @@ abstract class LifeCycleLogActivity : AppCompatActivity() {
     override fun finish() {
         Timber.d("finish")
         super.finish()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Timber.d("onActivityResult requestCode=$resultCode, resultCode=$resultCode, data=$data")
     }
 }

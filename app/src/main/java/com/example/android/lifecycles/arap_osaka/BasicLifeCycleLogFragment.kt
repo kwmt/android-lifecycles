@@ -1,6 +1,7 @@
 package com.example.android.lifecycles.arap_osaka
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -95,5 +96,10 @@ class BasicLifeCycleLogFragment : Fragment() {
         Timber.d("onDestroy: context=$context, activity=$activity")
         super.onDestroy()
         Timber.d("onDestroy: after super.onDestroy context=$context, activity=$activity")
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Timber.d("onActivityResult requestCode=$resultCode, resultCode=$resultCode, data=$data")
     }
 }
