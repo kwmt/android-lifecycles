@@ -19,7 +19,7 @@ class BLifeCycleLogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         Timber.d("onCreateView: $savedInstanceState")
-        return inflater.inflate(R.layout.fragment_a_lifecycle, container, false)
+        return inflater.inflate(R.layout.fragment_b_lifecycle, container, false)
     }
 
     override fun onAttach(context: Context) {

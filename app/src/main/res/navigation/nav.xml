@@ -10,7 +10,7 @@
         android:id="@+id/aLifeCycleLogFragment"
         android:name="com.example.android.lifecycles.arap_osaka.ALifeCycleLogFragment"
         android:label="fragment_basic_lifecycle"
-        tools:layout="@layout/fragment_b_lifecycle"
+        tools:layout="@layout/fragment_a_lifecycle"
         >
         <action
             android:id="@+id/action_basicLifeCycleLogFragment_to_basicLifeCycleLogFragment2"
@@ -22,6 +22,6 @@
         android:id="@+id/bLifeCycleLogFragment"
         android:name="com.example.android.lifecycles.arap_osaka.BLifeCycleLogFragment"
         android:label="fragment_basic_lifecycle2"
-        tools:layout="@layout/fragment_a_lifecycle"
+        tools:layout="@layout/fragment_b_lifecycle"
         />
 </navigation>
