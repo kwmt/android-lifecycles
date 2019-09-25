@@ -6,12 +6,9 @@ import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.LifeCycleLogActivity
 import kotlinx.android.synthetic.main.activity_basic_lifecycle.fab
 import kotlinx.android.synthetic.main.activity_basic_lifecycle.toolbar
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import timber.log.Timber
 
-class BasicLifeCycleActivity : LifeCycleLogActivity(), BasicLifeCycleLogFragment.OnClickTextView {
+class BasicLifeCycleActivity : LifeCycleLogActivity(), ALifeCycleLogFragment.OnClickTextView {
     override fun onClick(text: String) {
         Timber.d("$text")
     }

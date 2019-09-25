@@ -8,9 +8,9 @@
 
     <fragment
         android:id="@+id/basicLifeCycleLogFragment"
-        android:name="com.example.android.lifecycles.arap_osaka.BasicLifeCycleLogFragment"
+        android:name="com.example.android.lifecycles.arap_osaka.ALifeCycleLogFragment"
         android:label="fragment_basic_lifecycle"
-        tools:layout="@layout/fragment_basic_lifecycle"
+        tools:layout="@layout/fragment_b_lifecycle"
         >
         <action
             android:id="@+id/action_basicLifeCycleLogFragment_to_basicLifeCycleLogFragment2"
@@ -20,8 +20,8 @@
     </fragment>
     <fragment
         android:id="@+id/basicLifeCycleLogFragment2"
-        android:name="com.example.android.lifecycles.arap_osaka.BasicLifeCycleLogFragment2"
+        android:name="com.example.android.lifecycles.arap_osaka.BLifeCycleLogFragment"
         android:label="fragment_basic_lifecycle2"
-        tools:layout="@layout/fragment_basic_lifecycle2"
+        tools:layout="@layout/fragment_a_lifecycle"
         />
 </navigation>

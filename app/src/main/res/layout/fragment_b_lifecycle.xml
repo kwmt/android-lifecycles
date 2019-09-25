@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.lifecycles.arap_osaka.BasicLifeCycleLogFragment2"
+    tools:context="com.example.android.lifecycles.arap_osaka.ALifeCycleLogFragment"
     tools:showIn="@layout/activity_basic_lifecycle"
-    android:background="#00FFFF"
+    android:background="#FFFF00"
     >
 
     <TextView
+        android:id="@+id/basic1_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Two"
-        android:textSize="40sp"
         android:gravity="center"
+        android:text="One"
         android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
