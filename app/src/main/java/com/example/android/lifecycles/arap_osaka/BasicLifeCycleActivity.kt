@@ -18,7 +18,7 @@ class BasicLifeCycleActivity : LifeCycleLogActivity(), ALifeCycleLogFragment.OnC
         setContentView(R.layout.activity_basic_lifecycle)
         setSupportActionBar(toolbar)
         fab.setOnClickListener { view ->
-            findNavController(R.id.nav_host_container).navigate(R.id.basicLifeCycleLogFragment2)
+            findNavController(R.id.nav_host_container).navigate(R.id.bLifeCycleLogFragment)
         }
 
 //        GlobalScope.launch {

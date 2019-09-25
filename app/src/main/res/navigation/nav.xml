@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/basicLifeCycleLogFragment"
+    app:startDestination="@id/aLifeCycleLogFragment"
     >
 
     <fragment
-        android:id="@+id/basicLifeCycleLogFragment"
+        android:id="@+id/aLifeCycleLogFragment"
         android:name="com.example.android.lifecycles.arap_osaka.ALifeCycleLogFragment"
         android:label="fragment_basic_lifecycle"
         tools:layout="@layout/fragment_b_lifecycle"
         >
         <action
             android:id="@+id/action_basicLifeCycleLogFragment_to_basicLifeCycleLogFragment2"
-            app:destination="@id/basicLifeCycleLogFragment2"
+            app:destination="@id/bLifeCycleLogFragment"
             />
 
     </fragment>
     <fragment
-        android:id="@+id/basicLifeCycleLogFragment2"
+        android:id="@+id/bLifeCycleLogFragment"
         android:name="com.example.android.lifecycles.arap_osaka.BLifeCycleLogFragment"
         android:label="fragment_basic_lifecycle2"
         tools:layout="@layout/fragment_a_lifecycle"
