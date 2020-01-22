@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 
 import com.example.android.codelabs.lifecycle.R
@@ -32,11 +33,11 @@ class StartFragment : Fragment() {
             viewModel.onClickNextButton()
         }
 
-        viewModel.nextView.observe(viewLifecycleOwner, Observer {
+        viewModel.nextView.observe(viewLifecycleOwner) {
             it.onSuccess { nextViewType ->
                 findNavController().navigate(R.id.action_startFragment_to_destinationFragment,
                         Bundle().apply { putSerializable("nextViewType", nextViewType) })
             }
-        })
+        }
     }
 }

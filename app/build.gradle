@@ -38,6 +38,10 @@ android {
     dataBinding {
         enabled = true
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
     productFlavors {
     }
 }
@@ -49,15 +53,18 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "androidx.cardview:cardview:$cardViewVersion"
     implementation "androidx.legacy:legacy-support-v4:$legacySupportVersion"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "androidx.fragment:fragment-ktx:1.1.0"
 
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
-    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
 
     implementation "com.jakewharton.timber:timber:4.7.1"
