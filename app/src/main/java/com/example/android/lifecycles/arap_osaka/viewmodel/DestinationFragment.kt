@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 
 import com.example.android.codelabs.lifecycle.R
+import timber.log.Timber
 
 class DestinationFragment : Fragment() {
 
@@ -25,7 +26,9 @@ class DestinationFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(DestinationViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        val nextViewType = arguments?.getSerializable("nextViewType") as? NextViewType ?: return
+        Timber.d("$nextViewType")
     }
 
 }

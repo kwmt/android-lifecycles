@@ -16,6 +16,10 @@
             android:id="@+id/action_startFragment_to_destinationFragment"
             app:destination="@id/destinationFragment"
             />
+        <argument
+            android:name="nextViewType"
+            app:argType="com.example.android.lifecycles.arap_osaka.viewmodel.NextViewType"
+            />
     </fragment>
     <fragment
         android:id="@+id/destinationFragment"

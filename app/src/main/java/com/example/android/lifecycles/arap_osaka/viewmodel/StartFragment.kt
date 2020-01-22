@@ -24,11 +24,6 @@ class StartFragment : Fragment() {
                               savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.start_fragment, container, false)
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -38,13 +33,11 @@ class StartFragment : Fragment() {
             viewModel.onClickNextButton()
         }
 
-
         viewModel.nextView.observe(viewLifecycleOwner, Observer {
-            if (it) {
-                findNavController().navigate(R.id.action_startFragment_to_destinationFragment)
+            it.onSuccess { nextViewType ->
+                findNavController().navigate(R.id.action_startFragment_to_destinationFragment,
+                        Bundle().apply { putSerializable("nextViewType", nextViewType) })
             }
         })
-
     }
-
 }
