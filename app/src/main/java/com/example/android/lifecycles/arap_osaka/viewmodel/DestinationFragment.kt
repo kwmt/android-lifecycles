@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 
 import com.example.android.codelabs.lifecycle.R
@@ -16,7 +17,7 @@ class DestinationFragment : Fragment() {
         fun newInstance() = DestinationFragment()
     }
 
-    private lateinit var viewModel: DestinationViewModel
+    private val viewModel: DestinationViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -25,7 +26,6 @@ class DestinationFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DestinationViewModel::class.java)
 
         val nextViewType = arguments?.getSerializable("nextViewType") as? NextViewType ?: return
         Timber.d("$nextViewType")

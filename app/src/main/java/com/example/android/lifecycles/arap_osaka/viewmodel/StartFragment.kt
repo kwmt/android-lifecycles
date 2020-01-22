@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -18,7 +19,7 @@ class StartFragment : Fragment() {
         fun newInstance() = StartFragment()
     }
 
-    private lateinit var viewModel: StartViewModel
+    private val viewModel: StartViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? =
@@ -26,8 +27,6 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(StartViewModel::class.java)
 
         view.findViewById<Button>(R.id.nextButton).setOnClickListener {
             viewModel.onClickNextButton()
