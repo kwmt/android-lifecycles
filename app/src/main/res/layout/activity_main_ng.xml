@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.lifecycles.arap_osaka.viewmodel.Main2Activity"
+    tools:context="com.example.android.lifecycles.arap_osaka.livedata.ng.MainNgActivity"
     >
 
     <fragment
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav2"
+        app:navGraph="@navigation/nav_ng"
         />
 
 </LinearLayout>

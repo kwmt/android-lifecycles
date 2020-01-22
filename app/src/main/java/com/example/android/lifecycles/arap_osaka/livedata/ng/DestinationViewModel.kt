@@ -1,4 +1,4 @@
-package com.example.android.lifecycles.arap_osaka.viewmodel
+package com.example.android.lifecycles.arap_osaka.livedata.ng
 
 import androidx.lifecycle.ViewModel
 

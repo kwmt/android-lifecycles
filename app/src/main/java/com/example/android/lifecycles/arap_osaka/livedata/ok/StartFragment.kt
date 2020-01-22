@@ -1,4 +1,4 @@
-package com.example.android.lifecycles.arap_osaka.viewmodel
+package com.example.android.lifecycles.arap_osaka.livedata.ok
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
-
 import com.example.android.codelabs.lifecycle.R
 
 class StartFragment : Fragment() {

@@ -1,9 +1,10 @@
-package com.example.android.lifecycles.arap_osaka.viewmodel
+package com.example.android.lifecycles.arap_osaka.livedata.ng
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import java.lang.Exception
+import com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType
+import com.example.android.lifecycles.arap_osaka.livedata.model.RepositoryImpl
 import java.lang.IllegalStateException
 
 class StartViewModel : ViewModel() {
@@ -27,20 +28,4 @@ class StartViewModel : ViewModel() {
         }
     }
 }
-
-interface Repository {
-    fun fetchData(): Data
-}
-
-class RepositoryImpl : Repository {
-    override fun fetchData(): Data {
-        return Data("A")
-    }
-}
-
-enum class NextViewType {
-    A, B, C
-}
-
-data class Data(val name: String)
 

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav2"
+    android:id="@+id/nav_ok"
     app:startDestination="@id/startFragment"
     >
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.android.lifecycles.arap_osaka.viewmodel.StartFragment"
+        android:name="com.example.android.lifecycles.arap_osaka.livedata.ok.StartFragment"
         android:label="start_fragment"
         tools:layout="@layout/start_fragment"
         >
@@ -18,12 +19,12 @@
             />
         <argument
             android:name="nextViewType"
-            app:argType="com.example.android.lifecycles.arap_osaka.viewmodel.NextViewType"
+            app:argType="com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType"
             />
     </fragment>
     <fragment
         android:id="@+id/destinationFragment"
-        android:name="com.example.android.lifecycles.arap_osaka.viewmodel.DestinationFragment"
+        android:name="com.example.android.lifecycles.arap_osaka.livedata.ok.DestinationFragment"
         android:label="destination_fragment"
         tools:layout="@layout/destination_fragment"
         />

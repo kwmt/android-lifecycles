@@ -1,8 +1,9 @@
-package com.example.android.lifecycles.arap_osaka.viewmodel
+package com.example.android.lifecycles.arap_osaka.livedata_ng
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.google.common.truth.Truth.assertThat
+import com.example.android.lifecycles.arap_osaka.livedata.ok.NextViewType
+import com.example.android.lifecycles.arap_osaka.livedata.ok.StartViewModel
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.Before

@@ -1,4 +1,4 @@
-package com.example.android.lifecycles.arap_osaka.viewmodel
+package com.example.android.lifecycles.arap_osaka.livedata.ok
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-
 import com.example.android.codelabs.lifecycle.R
+import com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType
 import timber.log.Timber
 
 class DestinationFragment : Fragment() {
@@ -27,7 +26,8 @@ class DestinationFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val nextViewType = arguments?.getSerializable("nextViewType") as? NextViewType ?: return
+        val nextViewType = arguments?.getSerializable("nextViewType") as? NextViewType
+                ?: return
         Timber.d("$nextViewType")
     }
 

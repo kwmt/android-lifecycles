@@ -17,14 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name="com.example.android.lifecycles.arap_osaka.viewmodel.Main2Activity">
+        <activity android:name="com.example.android.lifecycles.arap_osaka.livedata.ng.MainNgActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.lifecycles.arap_osaka.livedata_ok.Main3Activity">
+        <activity android:name="com.example.android.lifecycles.arap_osaka.livedata.ok.MainOkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
