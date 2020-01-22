@@ -68,6 +68,11 @@ dependencies {
     // Tests
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     testImplementation "junit:junit:$junitVersion"
+    final mockk_version = "1.9.3"
+    androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "com.google.truth:truth:1.0"
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.1'
 

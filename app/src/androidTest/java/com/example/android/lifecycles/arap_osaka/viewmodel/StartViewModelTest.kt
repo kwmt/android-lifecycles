@@ -1,5 +1,3 @@
-package com.example.android.lifecycles.arap_osaka
-
 import org.junit.Before
 import org.junit.Test
 
