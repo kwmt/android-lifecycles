@@ -42,6 +42,6 @@ class ChronoViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        Timber.d("onCleare")
+        Timber.d("onCleared")
     }
 }
