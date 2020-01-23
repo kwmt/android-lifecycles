@@ -1,16 +1,15 @@
-package com.example.android.lifecycles.arap_osaka.livedata_ng
+package com.example.android.lifecycles.arap_osaka.livedata.ng
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.example.android.lifecycles.arap_osaka.livedata.ok.NextViewType
-import com.example.android.lifecycles.arap_osaka.livedata.ok.StartViewModel
+import com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class StartViewModelTest {
+class StartNgViewModelTest {
     @Rule
     @JvmField
     val instantTaskExecutorRule = InstantTaskExecutorRule()
