@@ -47,7 +47,7 @@ ext {
     espressoVersion = '3.1.0'
     junitVersion = '4.12'
     legacySupportVersion = '1.0.0'
-    lifecycleVersion = '2.2.0-rc03'
+    lifecycleVersion = '2.2.0'
     recyclerViewVersion = '1.1.0'
     roomVersion = '2.2.3'
     constraintLayoutVersion = '1.1.3'

@@ -22,6 +22,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.LifeCycleLogActivity
 import kotlinx.android.synthetic.main.activity_main.activity_main
@@ -33,12 +35,14 @@ class ChronoLogActivity : LifeCycleLogActivity() {
         private var innerClass: SomeInnerClass? = null
     }
 
-    private val viewModel by viewModels<ChronoViewModel>()
+//    private val viewModel by viewModels<ChronoViewModel>()
+    private lateinit var viewModel : ChronoViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        viewModel = ViewModelProvider(this).get(ChronoViewModel::class.java)
 
         activity_main.addView(Button(this).apply {
             setText("postValueのgetValue")

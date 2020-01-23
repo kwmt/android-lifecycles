@@ -29,7 +29,7 @@ public class ChronoActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_step1);
 
         // The ViewModelStore provides a new ViewModel or one previously created.
         ChronometerViewModel chronometerViewModel
