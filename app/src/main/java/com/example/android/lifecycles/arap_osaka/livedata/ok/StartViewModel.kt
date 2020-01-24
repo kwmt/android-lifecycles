@@ -5,13 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType
 import com.example.android.lifecycles.arap_osaka.livedata.model.RepositoryImpl
-import java.lang.IllegalStateException
 
 class StartViewModel : ViewModel() {
     private val repository = RepositoryImpl()
 
-    private val _nextView = MutableLiveData<Event<NextViewType>>()
-    val nextView: LiveData<Event<NextViewType>> = _nextView
+    private val _nextLiveDate = MutableLiveData<Event<NextViewType>>()
+    val nextLiveData: LiveData<Event<NextViewType>> = _nextLiveDate
 
     fun onClickNextButton() {
         // APIレスポンスの結果によって、画面遷移を変えたい場合
@@ -21,6 +20,6 @@ class StartViewModel : ViewModel() {
             "B" -> NextViewType.B
             else -> NextViewType.C
         }
-        _nextView.value = Event(nextType)
+        _nextLiveDate.value = Event(nextType)
     }
 }

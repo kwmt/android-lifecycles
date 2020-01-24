@@ -33,7 +33,7 @@ class StartOkViewModelTest {
 
         }
         // 1回目observerを呼ぶ
-        target.nextView.observeForever(observer1)
+        target.nextLiveData.observeForever(observer1)
 
         target.onClickNextButton()
 
@@ -45,7 +45,7 @@ class StartOkViewModelTest {
 
         }
         // 2回目のobserveが呼ばれた時
-        target.nextView.observeForever(observer2)
+        target.nextLiveData.observeForever(observer2)
     }
 
 }

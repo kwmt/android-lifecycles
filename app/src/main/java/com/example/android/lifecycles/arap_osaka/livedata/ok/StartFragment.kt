@@ -30,7 +30,7 @@ class StartFragment : Fragment() {
             viewModel.onClickNextButton()
         }
 
-        viewModel.nextView.observe(viewLifecycleOwner) { event ->
+        viewModel.nextLiveData.observe(viewLifecycleOwner) { event ->
             event.getContentIfNotHandled()?.let { nextViewType ->
                 findNavController().navigate(R.id.action_startFragment_to_destinationFragment,
                         Bundle().apply { putSerializable("nextViewType", nextViewType) })

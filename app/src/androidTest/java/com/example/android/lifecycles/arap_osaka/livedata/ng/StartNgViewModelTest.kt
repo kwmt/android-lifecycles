@@ -27,7 +27,7 @@ class StartNgViewModelTest {
         val observer = mockk<Observer<Result<NextViewType>>>(relaxed = true)
 
         // 最初にobserveが呼ばれたときには、
-        target.nextView.observeForever(observer)
+        target.nextLiveData.observeForever(observer)
         // LiveDataのonChangedは呼ばれないが、
         verify(exactly = 0) { observer.onChanged(Result.success(NextViewType.A)) }
 
@@ -36,7 +36,7 @@ class StartNgViewModelTest {
         verify { observer.onChanged(Result.success(NextViewType.A)) }
 
         // 再度observeが呼ばれた場合に、
-        target.nextView.observeForever(observer)
+        target.nextLiveData.observeForever(observer)
         // onChangedが呼ばれてしまう。
         verify { observer.onChanged(Result.success(NextViewType.A)) }
     }
