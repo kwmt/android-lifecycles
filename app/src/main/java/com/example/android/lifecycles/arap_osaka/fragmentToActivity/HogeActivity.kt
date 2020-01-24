@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.codelabs.lifecycle.R
 
-class ActivityFromFragmentActivity : AppCompatActivity(), ToActivityFragment.OnClickListener {
+class HogeActivity : AppCompatActivity(), FugaFragment.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

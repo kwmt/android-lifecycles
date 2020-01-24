@@ -10,7 +10,7 @@ import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType
 import timber.log.Timber
 
-class ToActivityFragment : Fragment() {
+class FugaFragment : Fragment() {
 
     interface OnClickListener {
         fun onClick()
