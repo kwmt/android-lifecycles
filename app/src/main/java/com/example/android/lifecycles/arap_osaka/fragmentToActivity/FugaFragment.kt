@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.viewModels
 import com.example.android.codelabs.lifecycle.R
 import com.example.android.lifecycles.arap_osaka.livedata.model.NextViewType
@@ -16,11 +17,16 @@ class FugaFragment : Fragment() {
         fun onClick()
     }
 
+    private val viewModel by viewModels<HogeViewModel> ({ requireActivity() })
+
     private var onClickListener: OnClickListener? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return View(this.requireContext())
+        return Button(this.requireContext()).apply {
+            text = "Fragmentのボタン"
+            textSize = 40f
+        }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -30,6 +36,10 @@ class FugaFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        view.setOnClickListener {
+            viewModel.onClick()
+        }
 
     }
 }
