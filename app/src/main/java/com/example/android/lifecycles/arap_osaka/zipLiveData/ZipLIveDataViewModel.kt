@@ -12,7 +12,7 @@ class ZipLIveDataViewModel : ViewModel() {
     val editText1 = MutableLiveData<String>()
     val editText2 = MutableLiveData<String>()
 
-    val isEnabled : LiveData<Boolean> = zipLiveData(editText1, editText2).map { (e1, e2) ->
+    val isEnabled: LiveData<Boolean> = zipLiveData(editText1, editText2).map { (e1, e2) ->
         e1.isNotEmpty() && e2.isNotEmpty()
     }
 
