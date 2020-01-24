@@ -10,21 +10,17 @@ import java.lang.IllegalStateException
 class StartViewModel : ViewModel() {
     private val repository = RepositoryImpl()
 
-    private val _nextView = MutableLiveData<Event<Result<NextViewType>>>()
-    val nextView: LiveData<Event<Result<NextViewType>>> = _nextView
+    private val _nextView = MutableLiveData<Event<NextViewType>>()
+    val nextView: LiveData<Event<NextViewType>> = _nextView
 
     fun onClickNextButton() {
-        try {
-            // APIレスポンスの結果によって、画面遷移を変えたい場合
-            val data = repository.fetchData()
-            val nextType = when (data.name) {
-                "A" -> NextViewType.A
-                "B" -> NextViewType.B
-                else -> NextViewType.C
-            }
-            _nextView.value = Event(Result.success(nextType))
-        } catch (e: IllegalStateException) {
-            _nextView.value = Event(Result.failure(e))
+        // APIレスポンスの結果によって、画面遷移を変えたい場合
+        val data = repository.fetchData()
+        val nextType = when (data.name) {
+            "A" -> NextViewType.A
+            "B" -> NextViewType.B
+            else -> NextViewType.C
         }
+        _nextView.value = Event(nextType)
     }
 }

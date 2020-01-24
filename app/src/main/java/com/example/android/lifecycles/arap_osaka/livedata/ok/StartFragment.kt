@@ -31,14 +31,10 @@ class StartFragment : Fragment() {
         }
 
         viewModel.nextView.observe(viewLifecycleOwner) { event ->
-            val result = event.getContentIfNotHandled()
-            if (result != null) {
-                result.onSuccess { nextViewType ->
-                    findNavController().navigate(R.id.action_startFragment_to_destinationFragment,
-                            Bundle().apply { putSerializable("nextViewType", nextViewType) })
-                }
+            event.getContentIfNotHandled()?.let { nextViewType ->
+                findNavController().navigate(R.id.action_startFragment_to_destinationFragment,
+                        Bundle().apply { putSerializable("nextViewType", nextViewType) })
             }
-
         }
     }
 }
