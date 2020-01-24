@@ -30,11 +30,9 @@ class StartFragment : Fragment() {
             viewModel.onClickNextButton()
         }
 
-        viewModel.nextView.observe(viewLifecycleOwner) {
-            it.onSuccess { nextViewType ->
-                findNavController().navigate(R.id.action_startFragment_to_destinationFragment,
-                        Bundle().apply { putSerializable("nextViewType", nextViewType) })
-            }
+        viewModel.nextView.observe(viewLifecycleOwner) { nextViewType ->
+            findNavController().navigate(R.id.destinationFragment,
+                    Bundle().apply { putSerializable("nextViewType", nextViewType) })
         }
     }
 }

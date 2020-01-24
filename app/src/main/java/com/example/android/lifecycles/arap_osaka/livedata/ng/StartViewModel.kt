@@ -10,8 +10,8 @@ import java.lang.IllegalStateException
 class StartViewModel : ViewModel() {
     private val repository = RepositoryImpl()
 
-    private val _nextView = MutableLiveData<Result<NextViewType>>()
-    val nextView: LiveData<Result<NextViewType>> = _nextView
+    private val _nextView = MutableLiveData<NextViewType>()
+    val nextView: LiveData<NextViewType> = _nextView
 
     fun onClickNextButton() {
         try {
@@ -22,9 +22,9 @@ class StartViewModel : ViewModel() {
                 "B" -> NextViewType.B
                 else -> NextViewType.C
             }
-            _nextView.value = Result.success(nextType)
+            _nextView.value = nextType
         } catch (e: IllegalStateException) {
-            _nextView.value = Result.failure(e)
+
         }
     }
 }
